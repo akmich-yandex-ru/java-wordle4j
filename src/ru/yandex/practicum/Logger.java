@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
-public class Logger implements AutoCloseable{
+public class Logger implements AutoCloseable {
     private final PrintWriter printWriter;
 
     public Logger(String filename) throws IOException {
