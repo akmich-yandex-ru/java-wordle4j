@@ -102,7 +102,7 @@ public class WordleGame {
 
             if (count > 0) {
                 currentResult[i] = LetterStatus.PRESENT;
-                answerCounts.put(c, count-1);
+                answerCounts.put(c, (count-1));
                 presentLetters.add(c);
                 lettersOnWrongPlaces[currentStep][i] = c;
             } else {
