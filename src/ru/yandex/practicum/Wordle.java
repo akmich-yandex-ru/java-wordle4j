@@ -127,28 +127,5 @@ public class Wordle {
             System.out.println("Не удалось загрузить словарь.");
             logger.log("Ошибка загрузки словаря: " + e.getMessage());
         }
-
-
-
-
-
-        /*
-
-
-            if (!game.WordContainsInDictionary(inputWord)) {
-                System.out.println("Это слово отсутствует в словаре, введите корректное слово");
-            } else if (game.isCorrectGuess(inputWord)) {
-                System.out.println("Слово угадано!");
-                running = false;
-            } else if (game.getSteps() == 0) {
-                System.out.println("Попытки закончились. Вы проиграли! Загаданное слово: " + game.getAnswer());
-                running = false;
-            } else {
-                System.out.println(game.getHint(game.currentResult(inputWord)));
-            }
-
-        }
-
-         */
     }
 }

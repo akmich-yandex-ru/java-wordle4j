@@ -75,13 +75,13 @@ public class WordleGame {
         Map<Character, Integer> answerCounts = new HashMap<>();
         LetterStatus[] currentResult = new LetterStatus[5];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < WordleDictionary.WORD_LENGTH; i++) {
             char c = answer.charAt(i);
             answerCounts.put(c, answerCounts.getOrDefault(c, 0) + 1);
         }
 
         // точные совпадения
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < WordleDictionary.WORD_LENGTH; i++) {
             char a = answer.charAt(i);
             char w = word.charAt(i);
 
@@ -94,7 +94,7 @@ public class WordleGame {
         }
 
         // есть, но не там
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < WordleDictionary.WORD_LENGTH; i++) {
             if (currentResult[i] != null) continue;
 
             char c = word.charAt(i);
