@@ -100,9 +100,9 @@ public class WordleGame {
             char c = word.charAt(i);
             int count = answerCounts.getOrDefault(c, 0);
 
-            if (count > 0 ) {
+            if (count > 0) {
                 currentResult[i] = LetterStatus.PRESENT;
-                answerCounts.put(c, count -1);
+                answerCounts.put(c, count-1);
                 presentLetters.add(c);
                 lettersOnWrongPlaces[currentStep][i] = c;
             } else {
@@ -137,7 +137,7 @@ public class WordleGame {
         String hint;
 
         if (inputWords.isEmpty()) {
-            hint = dictionary.getRandomWord(); 
+            hint = dictionary.getRandomWord();
         } else {
             hint = dictionary.getSuitableWord(absentLetters, presentLetters, lettersOnCorrectPlaces, lettersOnWrongPlaces, inputWords);
         }
